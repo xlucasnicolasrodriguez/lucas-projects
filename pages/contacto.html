@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-1x1.png">
+    <link rel="stylesheet" href="/estilos.css">
+    <script src="https://kit.fontawesome.com/0b7c6b05ac.js" crossorigin="anonymous"></script>
+    <title>Garden Fields</title>
+</head>
+<!--body-->
+<body>
+    <header class="header">
+        <nav class="header__nav"> 
+            <a href="../index.html">
+                <img class="logo" src="../assets/images/logotype.png" alt="logo-gardenfields">
+            </a>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./trabajos.html">Trabajos</a></li>
+                <li><a href="./cursos.html">Cursos</a></li>                
+                <li><a href="./nosotros.html">Nosotros</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+<!--main sector-->
+    <main>
+        <div class="bannerPages">
+            <img src="../assets/images/banner-contacto.jpg" alt="banner-contacto" width="100%">
+        </div>
+        <div class="container">
+            <article class="contacto__text">
+                <h2 class="contacto__text--h2">COMPLETA EL FORMULARIO</h2>
+                <p>
+                    Nuestra pasión por el cuidado de espacios verde nos lleva a conocer en profundidad las necesidades de nuestros clientes, por eso queremos que nos cuentes cuales son tus intereses y nos pondremos en contacto a la brevedad para un asesoramiento personalizado.
+                </p>
+            </article>
+<!--formulario-->
+            <form class="container2" action="procesar.php" name="contacto" method="post">
+                <div class="contacto__fieldset1">
+                    <p>
+                    <label>Nombre:
+                        <input type="text" name="nombre" placeholder="" required>
+                    </label>
+                    </p>                        
+                    <p>
+                    <label>Telefono:
+                    <input type="tel" name="tel" placeholder="" required>
+                    </label>
+                    </p> 
+                    <p>                       
+                    <label>Interes
+                        <select name="interes">
+                        <option value="jardineria integral">Jardineria Integral</option>
+                        <option value="jardin vertical">Jardin Vertical</option>
+                        <option value="mantenimiento">Mantenimiento</option>
+                        <option value="poda">Poda en Altura</option>
+                        <option value="cursos">Cursos</option>
+                        </select>
+                    </label>
+                    </p>                      
+                    <p>
+                    <label for="newsletter">Desea recibir newsletter
+                        <input type="checkbox" name="newsletter" value="si">
+                    </label>
+                    </p>
+                </div>
+                <div class="contacto__fieldset2">
+                    <p>
+                    <label>Apellido:
+                        <input type="text" name="apellido" placeholder="" required>
+                    </label>
+                    </p>
+                    <p>
+                    <label>Email:
+                        <input type="email" name="email" placeholder="" required>
+                    </label>
+                    </p>
+                    <p>Mensaje:</p>
+                    <textarea name="comentario" id="" cols="20" rows="5"></textarea>
+                    <p>
+                    <button class="buttomForm" type="submit">Enviar</button>
+                    </p>
+                    <p>
+                    <button class="buttomForm" type="reset">Borrar Formulario</button>
+                    </p>
+                </div>
+            </form>
+    <!--contact info-->
+            <article class="contacto__info contacto__infoDetalles">
+                <h3 class="contactTitles">DETALLES DE CONTACTO</h3>
+                <p>
+                    <i class="fa-solid fa-location-dot"></i> Calle falsa 123, Paseo Rodriguez, Buenos Aires CP:1000
+                </p>
+                <p>
+                    <i class="fa-solid fa-square-phone"></i> +541122445566
+                </p>
+                <P>
+                    <i class="fa-solid fa-square-envelope"></i> gardenfields@group.com
+                </P>
+            </article>
+            <article class="contacto__info contacto__infoComunicate">
+                <h3 class="contactTitles">COMUNICATE CON NOSOTROS</h3>
+                <a href="https://api.whatsapp.com/send?phone=541149389526"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="mailto:lucasxrodriguez@hotmail.com"><i class="fa-solid fa-envelope"></i></a>
+                <a href="tel:+541149389526"><i class="fa-solid fa-phone"></i></a>
+            </article>
+            <article class="contacto__info contacto__infoVisitanos">
+                <h3 class="contactTitles">VISITANOS EN NUESTRA SUCURSAL</h3>
+                <div style="width: 100%"><iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=Av.%20Paseo%20Colon%20100,%20c1064%20CABA+(GardenFields)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/car-satnav-gps/">GPS devices</a></iframe>
+                </div>
+            </article>
+        </div>
+    </main>
+<!--footer-->
+    <footer id="footer">
+        <div class="fotterContainer">
+            <article class="articleFotter1">
+                <a href="https://api.whatsapp.com/send?phone=541149389526"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="mailto:lucasxrodriguez@hotmail.com"><i class="fa-solid fa-envelope"></i></a>
+                <a href="tel:+541149389526"><i class="fa-solid fa-phone"></i></a>
+            </article>
+            <article class="articleFotter2">
+                <p>
+                    WRITTEN AND <br> DIRECTED BY <br> LUCAS PROJECTS
+                </p>
+            </article>
+        </div>
+    </footer>
+</body>
+</html>
