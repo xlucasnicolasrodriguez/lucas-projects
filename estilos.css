@@ -820,7 +820,7 @@ input{
     border-bottom: 1px solid rgb(84, 161, 94);
     outline: none;
 }
-.bi{
+.articleFotter1 .bi, .contacto__infoComunicate .bi{
     font-size: 2.5rem;
     text-align: center;
     padding: 20px;
