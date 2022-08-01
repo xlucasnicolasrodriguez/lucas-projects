@@ -820,6 +820,9 @@ input{
     border-bottom: 1px solid rgb(84, 161, 94);
     outline: none;
 }
+.contactTitles .bi{
+    font-size: 1rem;
+}
 .articleFotter1 .bi, .contacto__infoComunicate .bi{
     font-size: 2.5rem;
     text-align: center;
