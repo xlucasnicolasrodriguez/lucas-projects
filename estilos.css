@@ -165,6 +165,14 @@ header {
   height: 61px;
 }
 
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.85)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-toggler {
+  border: 1px solid whitesmoke;
+}
+
 /*HOME PAGE*/
 /*banner-style*/
 .banner {
@@ -396,10 +404,10 @@ section article h2, h2 {
 /*config responsive index*/
 @media (max-width: 768px) {
   body {
-    font-size: 12px;
+    font-size: 14px;
   }
   p {
-    line-height: 1rem;
+    line-height: 1.5rem;
   }
   /*nav responsive*/
   .logo {
@@ -459,13 +467,20 @@ section article h2, h2 {
   }
   .info__clients, .info__socialMedia, .info__medioambiente {
     padding: 10px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    margin: 10px;
+    margin: 50px;
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
   }
   .iconos {
     height: 1.875rem;
     width: 1.875rem;
+  }
+  .slide {
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding-left: 35px;
+    padding-right: 35px;
   }
 }
 /*TRABAJOS PAGE*/
@@ -834,6 +849,11 @@ ol li {
   font-weight: bold;
 }
 
+.nosotrosInfo__article2 h3, .nosotrosInfo__article1 h3 {
+  padding: 0.625rem;
+  margin: 0.625rem;
+}
+
 /*config responsive nosotros*/
 @media (max-width: 768px) {
   .nosotros {
@@ -880,6 +900,8 @@ ol li {
     text-align: center;
     margin: 0.0625rem;
     padding: 0.0625rem;
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
   }
   .nosotros__h2 {
     text-align: center;
@@ -903,6 +925,7 @@ ol li {
   justify-items: center;
   padding: 20px;
   background-color: rgb(84, 161, 94);
+  border-radius: 10px;
 }
 
 .contacto__text > p {
@@ -932,15 +955,11 @@ ol li {
 .contacto__fieldset1 {
   grid-column: 1/2;
   grid-row: 1/2;
-  align-items: center;
-  justify-items: center;
 }
 
 .contacto__fieldset2 {
   grid-column: 2/3;
   grid-row: 1/2;
-  align-items: center;
-  justify-items: center;
 }
 
 .contacto__infoDetalles {
@@ -1004,7 +1023,7 @@ input {
   .contacto__text {
     grid-column: 1/2;
     grid-row: 1/2;
-    padding: 0.3125rem;
+    margin: 0.3rem;
     text-align: center;
   }
   .container2 {
