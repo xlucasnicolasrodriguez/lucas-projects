@@ -20,7 +20,8 @@
 /*Variables*/
 $transparente:rgba(19, 18, 18, 0.507);
 $ocre: rgb(187, 90, 20);
-$transparentegris: rgba(71, 71, 71, 0.493);
+$transparentegris:rgba(255, 255, 255, .15);
+$esmerilado: blur(5px);
 $bordespx: 10px;
 
 /*body-style*/
@@ -62,7 +63,7 @@ h3{
         }
     }
 }
-.slide__right--img img, .slide__left--img img, .nosotros--img img{
+.nosotros--img img{
     width: 100%;
 }
 dl, ol, ul{
@@ -94,8 +95,10 @@ dl, ol, ul{
 /*nav-list-style*/
 header{
     background-color: $transparente;
+    backdrop-filter: $esmerilado;
     width: 100%;
     position: fixed;
+    z-index: 1;
 }
 .navbar{
     text-decoration: none;
@@ -222,6 +225,7 @@ section article h2, h2{
 .info__medioambiente--sub{
     color: aliceblue;
     background-color: $transparentegris;
+    backdrop-filter: $esmerilado;
     border-radius: $bordespx;
 }
 .info__medioambiente p, .info__medioambiente h2{
@@ -243,6 +247,7 @@ section article h2, h2{
 }
 .info__socialMedia--sub{
     background-color: $transparentegris;
+    backdrop-filter: $esmerilado;
     border-radius: $bordespx;
 }
 .info__socialMedia--iconos{
@@ -253,6 +258,7 @@ section article h2, h2{
 }
 .info__socialMedia--iconos{
     ul{
+        padding-bottom: 1.25rem;
         li{
             list-style: none;
             display: inline-block;
@@ -317,6 +323,9 @@ section article h2, h2{
     .logo{
         width: 170px;
         height: 61px;
+    }
+    header{
+        backdrop-filter: blur(5px);
     }
 /*banner responsive*/
     .banner{
@@ -700,7 +709,12 @@ ol{
 .nosotrosInfo__article h3, .nosotrosInfo__article p{
     color: white;
     background-color: $transparentegris;
+    backdrop-filter: $esmerilado;
     border-radius: $bordespx;
+}
+.nosotrosInfo__article2 h3, .nosotrosInfo__article2 p{
+    color: black;
+    font-weight: bold;
 }
 
 /*config responsive nosotros*/
