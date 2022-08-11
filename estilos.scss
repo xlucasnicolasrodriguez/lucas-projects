@@ -24,6 +24,41 @@ $transparentegris:rgba(255, 255, 255, .15);
 $esmerilado: blur(5px);
 $bordespx: 10px;
 
+/*maps- Aplicado en pagina de Trabajos*/
+$estilos:(
+    margenes: 1.25rem,
+    pading: 1.25rem,
+    center: center,
+    fondo: rgba(232, 238, 146, 0.521),
+    bordes: 20px,
+);
+
+.services__articles{
+    margin: map-get($map: $estilos, $key: margenes);
+    padding: map-get($map: $estilos, $key: pading);
+    text-align: map-get($map: $estilos, $key: center);
+    background-color: map-get($map: $estilos, $key: fondo);
+    border-radius: map-get($map: $estilos, $key: bordes);
+}
+
+/*extend*/
+
+.backImageText{
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-size:cover;
+    border: none;
+    padding: 80px;
+    margin: 60px;
+}
+
+/*mixin aplicado a lo largo del scss en margenes y padding*/
+@mixin marginpadding($m, $p) {
+    margin: $m;
+    padding: $p;
+}
+
+
 /*body-style*/
 body{
     background-color: white;
@@ -88,9 +123,8 @@ dl, ol, ul{
 /*images-style*/
 .imgPages{
     border: 2px solid black;
-    margin: 0;
-    padding: 0;
     line-height: 0;
+    @include marginpadding(0px, 0px);
 }
 /*nav-list-style*/
 header{
@@ -155,18 +189,16 @@ header{
 /*slide sections*/
 .slide1{
     padding-top: 70px;
-    margin: 20px;
-    padding: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     align-items: center;
     justify-items: center;
+    @include marginpadding(20px, 20px);
 }
 .slide__right{
     text-align: right;
-    padding: 5px;
-    margin: 5px;
+    @include marginpadding(5px, 5px);
     grid-column: 2/3;
     grid-row: 1/2;
 }
@@ -176,8 +208,7 @@ header{
 }
 .slide__left{
     text-align: left;
-    padding: 5px;
-    margin: 5px;
+    @include marginpadding(5px, 5px);
     grid-column: 1/2;
     grid-row: 2/3;
 }
@@ -213,19 +244,13 @@ section article h2, h2{
 }
 .info__clients, .info__socialMedia, .info__medioambiente {
     text-align: center;
-    padding: 20px;
-    margin: 20px;
     border: 10px;
     border-radius: $bordespx;
 }
 /*section medioambiente*/
 .info__medioambiente{
     background-image: url(.//assets/images/imgprueba2.jpg);
-    background-position: 100%;
-    background-repeat: no-repeat;
-    background-size:cover;
-    padding: 80px;
-    margin: 60px;
+    @extend .backImageText;
 }
 .info__medioambiente--sub{
     color: aliceblue;
@@ -240,12 +265,7 @@ section article h2, h2{
 /*icons social media*/
 .info__socialMedia{
     background-image: url(.//assets/images/imgprueba3.jpg);
-    background-position: 100%;
-    background-repeat: no-repeat;
-    background-size:cover;
-    border: none;
-    padding: 80px;
-    margin: 60px;
+    @extend .backImageText;
 }
 .info__socialMedia h2{
     color: white;
@@ -277,11 +297,6 @@ section article h2, h2{
 }
 /*slider icons clients*/
 .info__clients{
-    background-image: url(.//assets/images/imgprueba.jpg--);
-    background-position: 100%;
-    background-repeat: no-repeat;
-    background-size:cover;
-    border: none;
     margin: 60px;
 }
 .info__clients--h2{
@@ -343,8 +358,7 @@ section article h2, h2{
 /*slide responsive*/
     .slide1{
         padding-top: 70px;
-        margin: 5px;
-        padding: 5px;
+        @include marginpadding(5px, 5px);
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -380,8 +394,7 @@ section article h2, h2{
         font-size: 2rem;
     }
     .info__clients, .info__socialMedia, .info__medioambiente{
-        padding: 10px;
-        margin: 50px;
+        @include marginpadding(50px, 10px);
         padding-top: 1.875rem;
         padding-bottom: 1.875rem;
     }
@@ -401,8 +414,7 @@ section article h2, h2{
 }
 /*TRABAJOS PAGE*/
 .services{
-    margin: 0.625rem;
-    padding: 0.625rem;
+    @include marginpadding(0.625rem, 0.625rem);
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: repeat(4, 1fr);
@@ -410,14 +422,7 @@ section article h2, h2{
     justify-items: center;
 }
 .titleServices{
-    margin: 1.25rem;
-    padding: 1.25rem;
-}
-.services__articles{
-    margin: 1.25rem;
-    padding: 1.25rem;
-    text-align: center;
-    background-color: rgba(232, 238, 146, 0.521);
+    @include marginpadding(1.25rem, 1.25rem);
 }
 .video{
     line-height: 0;
@@ -463,16 +468,13 @@ section article h2, h2{
         grid-template-rows: repeat(8, 1fr);
         align-items: center;
         justify-items: center;
-        margin: 0.0625rem;
-        padding: 0.0625rem;
+        @include marginpadding(0.0625rem, 0.0625rem);
     }
     .services__articles{
-        margin: 0.0625rem;
-        padding: 0.0625rem;
+        @include marginpadding(0.0625rem, 0.0625rem);
     }
     .video{
-        margin: 0.0625rem;
-        padding: 0.0625rem;
+        @include marginpadding(0.0625rem, 0.0625rem);
     }
     .services__articles1{
         grid-column: 1/2;
@@ -512,8 +514,7 @@ section article h2, h2{
 }
 /*CURSOS PAGE*/
 .cursos{
-    margin: 0.9375rem;
-    padding: 0.9375rem;
+    @include marginpadding(0.9375rem, 0.9375rem);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 2fr;
@@ -599,8 +600,7 @@ ol{
 /*config responsive cursos*/
 @media(max-width: 768px){
     .cursos{
-        margin: 0.3125rem;
-        padding: 0.3125rem;
+        @include marginpadding(0.3125rem, 0.3125rem);
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: .5fr 1fr .5fr 1fr .5fr 1fr 1fr;
@@ -665,8 +665,7 @@ ol{
     gap: 20px;
     align-items: center;
     justify-items: center;
-    padding: 30px;
-    margin: 30px;
+    @include marginpadding(30px, 30px);
 }
 .nosotros__quienesSomos{
     grid-column: 1/2;
@@ -675,8 +674,7 @@ ol{
 .nosotros--img{
     grid-column: 2/3;
     grid-row: 1/2;
-    margin: 0;
-    padding: 0;
+    @include marginpadding(0px, 0px);
 }
 .nosotrosInfo__article1{
     grid-column: 1/3;
@@ -685,10 +683,7 @@ ol{
     justify-items: center;
     text-align: center;
     background-image: url(.//assets/images/imgprueba4.jpg);
-    background-position: 100%;
-    background-repeat: no-repeat;
-    background-size:cover;
-    border: none;
+    @extend .backImageText;
 }
 .nosotrosInfo__article2{
     grid-column: 1/3;
@@ -697,10 +692,7 @@ ol{
     justify-items: center;
     text-align: center;
     background-image: url(.//assets/images/imgprueba5.jpg);
-    background-position: 100%;
-    background-repeat: no-repeat;
-    background-size:cover;
-    border: none;
+    @extend .backImageText;
 }
 .nosotros__h2{
     font-family: dmsans-regular;
@@ -712,13 +704,11 @@ ol{
 }
 .nosotrosInfo{
     text-align: center;
-    margin: 20px;
-    padding: 20px;
+    @include marginpadding(20px, 20px);
 }
 .nosotrosInfo__article{
-    margin: 20px;
-    padding: 20px;
     border-radius: 10px;
+    @include marginpadding(20px, 20px);
 }
 .nosotrosInfo__article h3, .nosotrosInfo__article p{
     color: white;
@@ -731,8 +721,7 @@ ol{
     font-weight: bold;
 }
 .nosotrosInfo__article2 h3, .nosotrosInfo__article1 h3{
-    padding: 0.625rem;
-    margin: 0.625rem;
+    @include marginpadding(0.625rem, 0.625rem);
 }
 
 /*config responsive nosotros*/
@@ -744,8 +733,7 @@ ol{
         gap: 1.25rem;
         align-items: center;
         justify-items: center;
-        padding: 0.3125rem;
-        margin: 0.3125rem;
+        @include marginpadding(0.3125rem, 0.3125rem);
     }
     .nosotros__quienesSomos{
         grid-column: 1/2;
@@ -758,8 +746,7 @@ ol{
         grid-column: 1/2;
         grid-row: 2/3;
         border: none;
-        margin: 0;
-        padding: 0;
+        @include marginpadding(0px, 0px);
         width: 100%;
         height: 50vh;
     }
@@ -779,10 +766,11 @@ ol{
     }
     .nosotrosInfo__article{
         text-align: center;
-        margin: 0.0625rem;
-        padding: 0.0625rem;
+        @include marginpadding(0.0625rem, 0.0625rem);
         padding-top: 1.875rem;
         padding-bottom: 1.875rem;
+        margin-top: 1.875rem;
+        margin-bottom: 1.875rem;
     }
     .nosotros__h2{
         text-align: center;
@@ -794,9 +782,8 @@ ol{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 0.5fr 1fr;
     gap: 20px;
-    margin: 20px;
-    padding: 20px;
     padding-top: 20px;
+    @include marginpadding(20px, 20px);
 }
 .contacto__text{
     grid-column: 1/2;
@@ -882,8 +869,7 @@ input{
         grid-template-columns: 1fr;
         grid-template-rows: .5fr 1fr .5fr .5fr 1fr;
         gap: 0;
-        margin: 0;
-        padding: 0;
+        @include marginpadding(0px, 0px);
         padding-top: 0.625rem;
     }
     .contacto__text{
