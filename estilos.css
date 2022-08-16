@@ -475,6 +475,9 @@ section article h2, h2 {
   .info__socialMedia--sub h2 {
     font-size: 1.5rem;
   }
+  .info__socialMedia--sub h2 {
+    font-size: 1.5rem;
+  }
   .info__clients, .info__socialMedia, .info__medioambiente {
     margin: 50px;
     padding: 10px;
@@ -962,6 +965,7 @@ ol li {
 .contacto__fieldset2 {
   grid-column: 2/3;
   grid-row: 1/2;
+  border: 10px;
 }
 
 .contacto__infoDetalles {
@@ -996,6 +1000,7 @@ ol li {
 
 textarea {
   margin-left: 0.9375rem;
+  margin-left: 15px;
 }
 
 input {
@@ -1133,4 +1138,5 @@ input {
     line-height: 1.5rem;
   }
 }
+/*# sourceMappingURL=estilos.css.map */
 /*# sourceMappingURL=estilos.css.map */
