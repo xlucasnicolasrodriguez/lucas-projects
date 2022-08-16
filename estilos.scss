@@ -884,7 +884,7 @@ input{
     .container1{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: .5fr 1fr .5fr .5fr 1fr;
+        grid-template-rows: .5fr 1fr .5fr .5fr .5fr;
         gap: 0;
         @include marginpadding(0px, 0px);
         padding-top: 0.625rem;

@@ -1020,7 +1020,7 @@ input {
   .container1 {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 1fr 0.5fr 0.5fr 1fr;
+    grid-template-rows: 0.5fr 1fr 0.5fr 0.5fr 0.5fr;
     gap: 0;
     margin: 0px;
     padding: 0px;
