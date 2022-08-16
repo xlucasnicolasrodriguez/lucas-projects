@@ -475,9 +475,6 @@ section article h2, h2 {
   .info__socialMedia--sub h2 {
     font-size: 1.5rem;
   }
-  .info__socialMedia--sub h2 {
-    font-size: 1.5rem;
-  }
   .info__clients, .info__socialMedia, .info__medioambiente {
     margin: 50px;
     padding: 10px;
@@ -965,7 +962,6 @@ ol li {
 .contacto__fieldset2 {
   grid-column: 2/3;
   grid-row: 1/2;
-  border: 10px;
 }
 
 .contacto__infoDetalles {
@@ -1000,7 +996,6 @@ ol li {
 
 textarea {
   margin-left: 0.9375rem;
-  margin-left: 15px;
 }
 
 input {
@@ -1042,20 +1037,23 @@ input {
     grid-column: 1/2;
     grid-row: 2/3;
     width: 100%;
-    padding: 0.625rem;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 0.5fr;
-    align-items: center;
-    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
   }
   .contacto__fieldset1 {
     grid-column: 1/2;
     grid-row: 1/2;
+    border: 10px;
+    border-style: solid;
+    border-color: rgb(84, 161, 94);
   }
   .contacto__fieldset2 {
-    grid-column: 1/2;
-    grid-row: 2/3;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    border: 10px;
+    border-style: solid;
+    border-color: rgb(84, 161, 94);
   }
   .contacto__infoDetalles {
     grid-column: 1/2;
@@ -1079,6 +1077,26 @@ input {
   }
   .form-select {
     font-size: 0.7rem;
+  }
+}
+@media (max-width: 460px) {
+  .container2 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 0.5fr;
+  }
+  .contacto__fieldset1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    border: none;
+  }
+  .contacto__fieldset2 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    border: none;
   }
 }
 /*footer*/
@@ -1138,5 +1156,4 @@ input {
     line-height: 1.5rem;
   }
 }
-/*# sourceMappingURL=estilos.css.map */
 /*# sourceMappingURL=estilos.css.map */
