@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comunicate con nosotros o visitanos en nuestra sucursal, y obtene la mejor atencion personalizada." >
+    <meta name="keywords" content="JARDINERIA, CURSOS, MANTENIMIENTO, ESPACIOS VERDES, PLANTAS, SERVICIOS, JARDINERO">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-1x1.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../estilos.css">
+    <title>Contactanos | Garden Fields</title>
+</head>
+<!--body-->
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <img class="logo" src="../assets/images/logotype.png" alt="logo-gardenfields">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="./trabajos.html">Trabajos</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="./cursos.html">Cursos</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="./nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="./contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+    </header>
+<!--main sector-->
+    <main>
+        <div class="bannerPages">
+            <img src="../assets/images/banner-contacto.jpg" alt="banner-contacto" width="100%">
+        </div>
+        <div class="container1">
+            <article class="contacto__text">
+                <h2 class="contacto__text--h2">COMPLETA EL FORMULARIO</h2>
+                <p>
+                    Nuestra pasión por el cuidado de espacios verde nos lleva a conocer en profundidad las necesidades de nuestros clientes, por eso queremos que nos cuentes cuales son tus intereses y nos pondremos en contacto a la brevedad para un asesoramiento personalizado. No dudes en comunicarte con nosotros, nuestra experiencia es la fehaciente muestra del compromiso que tenemos en la empresa para con quienes confian en nuestro trabajo. Somos GardenFields, especialistas en jardineria.
+                </p>
+            </article>
+<!--formulario-->
+            <form class="container2" action="procesar.php" name="contacto" method="post">
+                <div class="contacto__fieldset1">
+                    <p>
+                    <label>Nombre:
+                        <input type="text" name="nombre" placeholder="" required>
+                    </label>
+                    </p>                        
+                    <p>
+                    <label>Telefono:
+                    <input type="tel" name="tel" placeholder="" required>
+                    </label>
+                    </p> 
+                    <p>                       
+                    <label>Interes:
+                        <select name="interes" class="form-select" aria-label="Default select example">
+                        <option value="jardineria integral">Jardineria Integral</option>
+                        <option value="jardin vertical">Jardin Vertical</option>
+                        <option value="mantenimiento">Mantenimiento</option>
+                        <option value="poda">Poda en Altura</option>
+                        <option value="cursos">Cursos</option>
+                        </select>
+                    </label>
+                    </p>                    
+                    <p>
+                    <label for="newsletter">Desea recibir newsletter
+                        <input type="checkbox" name="newsletter" value="si">
+                    </label>
+                    </p>
+                </div>
+                <div class="contacto__fieldset2">
+                    <p>
+                    <label>Apellido:
+                        <input type="text" name="apellido" placeholder="" required>
+                    </label>
+                    </p>
+                    <p>
+                    <label>Tu Email:
+                        <input type="email" name="email" placeholder="" required>
+                    </label>
+                    </p>
+                    <p>Mensaje:</p>
+                    <textarea name="comentario" id="" cols="20" rows="5"></textarea>
+                    <p>
+                    <button class="buttomForm" type="submit">Enviar</button>
+                    </p>
+                    <p>
+                    <button class="buttomForm" type="reset">Borrar Formulario</button>
+                    </p>
+                </div>
+            </form>
+    <!--contact info-->
+            <article class="contacto__info contacto__infoDetalles">
+                <h3 class="contactTitles">DETALLES DE CONTACTO</h3>
+                <p>
+                    <i class="bi bi-shop"></i>  Calle falsa 123, Paseo Rodriguez, Buenos Aires CP:1000
+                </p>
+                <p>
+                    <i class="bi bi-telephone"></i>+541122445566
+                </p>
+                <P>
+                    <i class="bi bi-envelope"></i>   gardenfields@group.com
+                </P>
+            </article>
+            <article class="contacto__info contacto__infoComunicate">
+                <h3 class="contactTitles">COMUNICATE CON NOSOTROS</h3>
+                <a href="https://api.whatsapp.com/send?phone=541149389526"><i class="bi bi-whatsapp"></i></a>
+                <a href="mailto:lucasxrodriguez@hotmail.com"><i class="bi bi-envelope"></i></a>
+                <a href="tel:+541149389526"><i class="bi bi-telephone"></i></a>
+            </article>
+            <article class="contacto__info contacto__infoVisitanos">
+                <h3 class="contactTitles">VISITANOS EN NUESTRA SUCURSAL</h3>
+                <div style="width: 100%"><iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=Av.%20Paseo%20Colon%20100,%20c1064%20CABA+(GardenFields)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/car-satnav-gps/">GPS devices</a></iframe>
+                </div>
+            </article>
+        </div>
+    </main>
+<!--footer-->
+    <footer id="footer">
+        <div class="fotterContainer">
+            <article class="articleFotter1">
+                <a href="https://api.whatsapp.com/send?phone=541149389526"><i class="bi bi-whatsapp"></i></a>
+                <a href="mailto:lucasxrodriguez@hotmail.com"><i class="bi bi-envelope"></i></a>
+                <a href="tel:+541149389526"><i class="bi bi-telephone"></i></a>
+            </article>
+            <article class="articleFotter2">
+                <p>
+                    WRITTEN AND <br> DIRECTED BY <br> LUCAS PROJECTS
+                </p>
+            </article>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+</body>
+</html>
